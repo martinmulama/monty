@@ -47,7 +47,7 @@ int main(int argc, char *argv[])
 			else if (strcmp(opcode, "sub") == 0)
 				opcode_sub(&stack, line_number);
 			else if (strcmp(opcode, "div") == 0)
-				opcode_sub(&stack, line_number);
+				opcode_div(&stack, line_number);
 			else
 			{
 				fprintf(stderr, "L%u: unknown instruction %s\n", line_number, opcode);
