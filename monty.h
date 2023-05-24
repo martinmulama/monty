@@ -38,6 +38,7 @@ typedef struct instruction_s
 	void (*f)(stack_t **stack, unsigned int line_number);
 } instruction_t;
 
+int is_ascii(int value);
 int is_integer(const char *str);
 void opcode_push(stack_t **stack, unsigned int line_number);
 void opcode_pall(stack_t **stack);
@@ -51,5 +52,6 @@ void opcode_div(stack_t **stack, unsigned int line_number);
 void opcode_mul(stack_t **stack, unsigned int line_number);
 void opcode_mod(stack_t **stack, unsigned int line_number);
 void opcode_pchar(stack_t **stack, unsigned int line_number);
+void opcode_pstr(stack_t **stack, unsigned int line_number);
 
 #endif /* MONTY_H */
