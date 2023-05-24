@@ -57,6 +57,8 @@ int main(int argc, char *argv[])
 				opcode_mul(&stack, line_number);
 			else if (strcmp(opcode, "mod") == 0)
 				opcode_mod(&stack, line_number);
+			else if (strcmp(opcode, "pchar") == 0)
+				opcode_pchar(&stack, line_number);
 			else
 			{
 				fprintf(stderr, "L%u: unknown instruction %s\n", line_number, opcode);
