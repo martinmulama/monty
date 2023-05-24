@@ -63,6 +63,8 @@ int main(int argc, char *argv[])
 				opcode_pstr(&stack, line_number);
 			else if (strcmp(opcode, "rotl") == 0)
 				opcode_rotl(&stack);
+			else if (strcmp(opcode, "rotr") == 0)
+				opcode_rotr(&stack);
 			else
 			{
 				fprintf(stderr, "L%u: unknown instruction %s\n", line_number, opcode);
