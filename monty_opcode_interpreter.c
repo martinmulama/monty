@@ -44,6 +44,8 @@ int main(int argc, char *argv[])
 				opcode_add(&stack, line_number);
 			else if (strcmp(opcode, "nop") == 0)
 				opcode_nop(&stack, line_number);
+			else if (strcmp(opcode, "sub") == 0)
+				opcode_sub(&stack, line_number);
 			else
 			{
 				fprintf(stderr, "L%u: unknown instruction %s\n", line_number, opcode);
