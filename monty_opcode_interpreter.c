@@ -7,6 +7,7 @@ int main(int argc, char *argv[])
 	size_t len;
 	unsigned int line_number;
 	stack_t *stack;
+	char *opcode;
 
 	if (argc != 2)
 	{
@@ -26,7 +27,11 @@ int main(int argc, char *argv[])
 
 	while (getline(&line, &len, file) != -1)
 	{
-		char *opcode = strtok(line, " \t\n");
+		/* Skip lines that start with # */
+		if (line[0] == '#')
+			continue;
+
+		opcode = strtok(line, " \t\n");
 
 		if (opcode != NULL && opcode[0] != '#')
 		{
